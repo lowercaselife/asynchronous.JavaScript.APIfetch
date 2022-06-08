@@ -1,31 +1,28 @@
-document.querySelector('.get-jokes').addEventListener('click', getJokes);
+const http = new EasyHTTP;
 
-function getJokes(e) {
-  const number = document.querySelector('input[type="number"]').value;
+// Get Users
+// http.get('https://jsonplaceholder.typicode.com/users')
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
 
-  const xhr = new XMLHttpRequest();
-
-  xhr.open('GET', `http://api.icndb.com/jokes/random/${number}`, true);
-
-  xhr.onload = function() {
-    if(this.status === 200) {
-      const response = JSON.parse(this.responseText);
-      
-      let output = '';
-
-      if(response.type === 'success') {
-        response.value.forEach(function(joke){
-          output += `<li>${joke.joke}</li>`;
-        });
-      } else {
-        output += '<li>Something went wrong</li>';
-      }
-
-      document.querySelector('.jokes').innerHTML = output;
-    }
-  }
-
-  xhr.send();
-
-  e.preventDefault();
+// User Data
+const data = {
+  name: 'John Doe',
+  username: 'johndoe',
+  email: 'jdoe@gmail.com'
 }
+
+// Create User
+// http.post('https://jsonplaceholder.typicode.com/users', data)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
+
+// Update Post
+// http.put('https://jsonplaceholder.typicode.com/users/2', data)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
+
+// Delete User
+http.delete('https://jsonplaceholder.typicode.com/users/2')
+.then(data => console.log(data))
+.catch(err => console.log(err));
