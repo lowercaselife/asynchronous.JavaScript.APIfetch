@@ -1,5 +1,3 @@
-# A Simple project to implement AJAX Fetch
+# Async, await JavaScript Practice
 
-## Chuck Norris joke Generator
-
-### Random Chuck norris jokes fetched from http://api.icndb.com/jokes/random/
+## Implementing Async Await with promises
