@@ -3,13 +3,13 @@
  * Library for making HTTP requests
  *
  * @version 3.0.0
- * @author  Brad Traversy
+ * @author  Danson Kalaghe
  * @license MIT
  *
  **/
 
- class EasyHTTP {
-  // Make an HTTP GET Request 
+class EasyHTTP {
+  // Make an HTTP GET Request
   async get(url) {
     const response = await fetch(url);
     const resData = await response.json();
@@ -19,28 +19,27 @@
   // Make an HTTP POST Request
   async post(url, data) {
     const response = await fetch(url, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-type': 'application/json'
+        "Content-type": "application/json",
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     });
 
     const resData = await response.json();
     return resData;
-   
   }
 
-   // Make an HTTP PUT Request
-   async put(url, data) {
+  // Make an HTTP PUT Request
+  async put(url, data) {
     const response = await fetch(url, {
-      method: 'PUT',
+      method: "PUT",
       headers: {
-        'Content-type': 'application/json'
+        "Content-type": "application/json",
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     });
-    
+
     const resData = await response.json();
     return resData;
   }
@@ -48,16 +47,13 @@
   // Make an HTTP DELETE Request
   async delete(url) {
     const response = await fetch(url, {
-      method: 'DELETE',
+      method: "DELETE",
       headers: {
-        'Content-type': 'application/json'
-      }
+        "Content-type": "application/json",
+      },
     });
 
-    const resData = await 'Resource Deleted...';
+    const resData = await "Resource Deleted...";
     return resData;
   }
-
- }
-
- 
+}
