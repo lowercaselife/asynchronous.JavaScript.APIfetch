@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "esm": "^3.2.25",
+    "superagent": "^8.0.0"
+  },
+  "name": "async_await_js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
